@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARL3N</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+background:black;
+color:white;
+font-family:'Playfair Display',serif;
+overflow-x:hidden;
+}
+
+/* SPARKLES */
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:0.07;
+z-index:-1;
+}
+
+/* SECTIONS */
+section{
+padding:120px 20px;
+max-width:1000px;
+margin:auto;
+position:relative;
+}
+
+.center{text-align:center;}
+.left{text-align:left;}
+.right{text-align:right;}
+
+h1{
+font-size:70px;
+font-weight:900;
+letter-spacing:10px;
+}
+
+.big-quote{
+font-size:26px;
+font-style:italic;
+margin-top:20px;
+}
+
+.image{
+width:100%;
+max-width:500px;
+display:block;
+margin:40px auto;
+}
+
+.ray{
+font-size:80px;
+font-weight:900;
+letter-spacing:15px;
+text-align:center;
+}
+
+.ray-sub{
+text-align:center;
+font-style:italic;
+opacity:0.8;
+margin-bottom:40px;
+}
+
+audio{
+width:100%;
+background:black;
+color:white;
+margin:15px 0;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.quote-between{
+font-size:22px;
+font-style:italic;
+text-align:center;
+grid-column:1/3;
+}
+
+.obsession{
+background:#111;
+padding:60px;
+text-align:center;
+margin-top:60px;
+}
+
+.obsession a{
+color:white;
+text-decoration:underline;
+cursor:pointer;
+}
+
+.contacts{
+text-align:center;
+}
+
+.footer{
+text-align:center;
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.footer.visible{
+opacity:1;
+transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<!-- HERO -->
+<section class="center">
+<h1><b>MARL3N</b></h1>
+<div class="big-quote"><b>"Will we have sex today? – M."</b></div>
+</section>
+
+<!-- FIRST PHOTOS -->
+<section class="left">
+<img src="IMG_2490.jpeg" class="image">
+</section>
+
+<section class="center">
+<div class="ray">RAY</div>
+<div class="ray-sub">my favorite chaos. my quiet obsession. my girl.</div>
+</section>
+
+<section class="right">
+<img src="IMG_2491.jpeg" class="image">
+</section>
+
+<!-- MUSIC -->
+<section class="center">
+<h2><b>Soundtrack</b></h2>
+
+<audio controls>
+<source src="Arctic Monkeys - Are you mine.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls>
+<source src="Lana Del Rey - High By The Beach (Clean Version).mp3" type="audio/mpeg">
+</audio>
+
+<audio controls>
+<source src="penelope scott - rat.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+<!-- GALLERY -->
+<section>
+<h2 class="center"><b>Gallery</b></h2>
+
+<div class="gallery">
+
+<img src="IMG_2492.jpeg" class="image">
+<img src="IMG_2494.jpeg" class="image">
+
+<div class="quote-between">"She looks like trouble and I look like I want it."</div>
+
+<img src="IMG_2495.jpeg" class="image">
+<img src="IMG_2496.jpeg" class="image">
+
+<div class="quote-between">"Late nights. Cigarettes. Her voice in my head."</div>
+
+<img src="IMG_2497.jpeg" class="image">
+<img src="IMG_2498.jpeg" class="image">
+
+<div class="quote-between">"If obsession is a sin, I don't want heaven."</div>
+
+<img src="IMG_2500.jpeg" class="image">
+<img src="IMG_2491.jpeg" class="image">
+
+</div>
+
+<div class="obsession">
+<h2><b>My Obsession</b></h2>
+<p>
+She is not just a girl.  
+She is a <a onclick="cat()">secret</a> I repeat in my head at 3am.
+</p>
+</div>
+
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts">
+<h2><b>My Contacts</b></h2>
+<p>Telegram:</p>
+<p>✈️ <b>@MRLI1X</b></p>
+</section>
+
+<!-- FOOTER -->
+<section class="footer" id="footer">
+<p>Made by <b>MARL3N</b></p>
+</section>
+
+<script>
+function cat(){
+alert("=^._.^= ∫");
+}
+
+window.addEventListener("scroll",function(){
+let footer=document.getElementById("footer");
+let position=footer.getBoundingClientRect().top;
+let screenPosition=window.innerHeight;
+if(position<screenPosition){
+footer.classList.add("visible");
+}
+});
+</script>
+
+</body>
+</html>
