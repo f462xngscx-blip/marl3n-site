@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARL3N</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background:black;
+    color:white;
+    font-family:'Playfair Display', serif;
+    overflow-x:hidden;
+}
+
+.sparkle{
+    position:fixed;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:.7;
+    animation:blink 2s infinite alternate;
+}
+
+@keyframes blink{
+    from{opacity:.2;}
+    to{opacity:1;}
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    text-align:center;
+}
+
+h1{
+    font-size:64px;
+    font-weight:900;
+    letter-spacing:8px;
+}
+
+.subtitle{
+    margin-top:20px;
+    font-size:20px;
+    opacity:.7;
+}
+
+.quote{
+    margin-top:20px;
+    font-size:22px;
+    font-style:italic;
+}
+
+img{
+    width:90%;
+    max-width:500px;
+    margin:40px 0;
+    transition:1s ease;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.fade.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.ray-box{
+    font-size:60px;
+    font-weight:900;
+    margin:40px 0;
+}
+
+.ray-sub{
+    font-size:20px;
+    font-style:italic;
+    opacity:.8;
+}
+
+audio{
+    margin:20px 0;
+    width:300px;
+    filter:invert(1);
+}
+
+.gallery img{
+    margin:20px 0;
+}
+
+.contacts{
+    margin-top:40px;
+    font-size:22px;
+}
+
+.telegram{
+    margin-top:15px;
+    font-size:18px;
+}
+
+footer{
+    margin-top:80px;
+    font-size:14px;
+    opacity:.5;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+<h1>MARL3N</h1>
+<div class="subtitle">silver rings. cigarettes after sex. late night drives.</div>
+<div class="quote">“Will we have sex tonight? — M.”</div>
+</section>
+
+<section>
+<img src="IMG_2490.jpeg" class="fade">
+<img src="IMG_2491.jpeg" class="fade">
+
+<div class="ray-box fade">RAY</div>
+<div class="ray-sub fade">my obsession. my girl. my reason.</div>
+
+<audio controls>
+<source src="Arctic Monkeys - Are you mine.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls>
+<source src="Lana Del Rey - High By The Beach (Clean Version).mp3" type="audio/mpeg">
+</audio>
+
+<audio controls>
+<source src="penelope scott - rat.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+<section class="gallery">
+<h2 style="font-size:40px;margin-bottom:40px;">GALLERY</h2>
+
+<img src="IMG_2492.jpeg" class="fade">
+<div class="quote fade">she looks like trouble in heaven.</div>
+
+<img src="IMG_2494.jpeg" class="fade">
+<div class="quote fade">her lips taste like cigarettes and secrets.</div>
+
+<img src="IMG_2495.jpeg" class="fade">
+<div class="quote fade">i would ruin my life for her.</div>
+
+<img src="IMG_2496.jpeg" class="fade">
+<div class="quote fade">love feels like a crime.</div>
+
+<img src="IMG_2497.jpeg" class="fade">
+<div class="quote fade">she is my religion.</div>
+
+<img src="IMG_2498.jpeg" class="fade">
+<div class="quote fade">if she leaves, i disappear.</div>
+
+<img src="IMG_2500.jpeg" class="fade">
+
+</section>
+
+<section>
+<div class="contacts fade">MY CONTACTS</div>
+<div class="telegram fade">Telegram: @MRL1IX</div>
+
+<footer class="fade">
+made by MARL3N
+</footer>
+</section>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+const rect=el.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+el.classList.add('visible');
+}
+});
+});
+
+for(let i=0;i<60;i++){
+let s=document.createElement('div');
+s.classList.add('sparkle');
+s.style.top=Math.random()*100+'vh';
+s.style.left=Math.random()*100+'vw';
+s.style.animationDuration=(Math.random()*3+1)+'s';
+document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
