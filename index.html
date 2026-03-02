@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARL3N</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.08;
+    animation: moveStars 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveStars {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 8px;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.image {
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+    display: block;
+}
+
+.ray-box {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin: 60px 0 20px;
+}
+
+.ray-sub {
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+audio {
+    width: 80%;
+    background: black;
+    color: white;
+    margin: 20px 0;
+    filter: invert(1);
+}
+
+.gallery img {
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    display: block;
+}
+
+.quote {
+    font-style: italic;
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+.contacts img {
+    width: 25px;
+    vertical-align: middle;
+}
+
+.footer {
+    padding: 60px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>MARL3N</h1>
+    <div class="subtitle">"Will we have sex tonight? — M."</div>
+</section>
+
+<img src="IMG_2490.jpeg" class="image">
+<img src="IMG_2491.jpeg" class="image">
+
+<div class="ray-box">RAY</div>
+<div class="ray-sub">the girl I love in silver nights and reckless silence</div>
+
+<section>
+    <audio controls>
+        <source src="Lana Del Rey - High By The Beach (Clean Version).mp3" type="audio/mpeg">
+    </audio>
+
+    <audio controls>
+        <source src="penelope scott - rat.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio controls>
+        <source src="Arctic Monkeys - Are you mine.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<section class="gallery">
+    <img src="IMG_2492.jpeg">
+    <div class="quote">silver nights & quiet obsession</div>
+
+    <img src="IMG_2494.jpeg">
+    <div class="quote">she looks like trouble, and I love it</div>
+
+    <img src="IMG_2495.jpeg">
+    <div class="quote">everything feels cinematic with her</div>
+
+    <img src="IMG_2496.jpeg">
+    <div class="quote">we burn slowly</div>
+
+    <img src="IMG_2497.jpeg">
+    <div class="quote">she is my favorite mistake</div>
+
+    <img src="IMG_2498.jpeg">
+    <div class="quote">love me like you mean it</div>
+
+    <img src="IMG_2500.jpeg">
+    <div class="quote">midnight belongs to us</div>
+</section>
+
+<section class="contacts">
+    <h2>My Contacts</h2>
+    <p>
+        <a href="https://t.me/MRL1IX" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+            @MRL1IX
+        </a>
+    </p>
+</section>
+
+<div class="footer" id="footer">
+    Made by MARL3N
+</div>
+
+<script>
+window.addEventListener('scroll', function() {
+    const footer = document.getElementById('footer');
+    const position = footer.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if(position < screenPosition) {
+        footer.classList.add('show');
+    }
+});
+</script>
+
+</body>
+</html>
